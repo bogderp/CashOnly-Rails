@@ -243,11 +243,21 @@ div.open i.fa-chevron-down {
 .submenu {
   display: none;
   background: #7E53A2;
-  height: 12vh;
+  height: 8vh;
   font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
 }
 
-.submenu div { border-bottom: 1px solid #7E53A2; }
+.submenu div { border-bottom: 2px solid #888888; }
+
+.submenu button {
+    border: none;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;   
+    font-size: 14px;
+    color: white;
+}
 
 
 
