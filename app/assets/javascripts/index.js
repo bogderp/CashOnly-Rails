@@ -33,6 +33,18 @@ $( document ).ready(function() {
         $('#cash-request-page').css('display', 'flex');
     });
 
+    $('#gave-cash-btn').click(function(){
+        $('#logged-in').fadeIn('slow'); 
+        $('#give-cash-page').fadeOut('slow');
+        // $('#logged-in').css('display', 'flex');
+    });
+
+    $('#cancel-give-btn').click(function(){
+        $('#logged-in').fadeIn('slow'); 
+        $('#give-cash-page').fadeOut('slow');
+        //$('#logged-in').css('display', 'flex');
+    });
+
     // $("#stop-location-tracking").click(function(e) {
     // 	alert("User stopped location tracking");
     // 	clearInterval(refreshIntervalID);

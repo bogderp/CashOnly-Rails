@@ -181,6 +181,48 @@
   font-family: 'Raleway', sans-serif;
   font-size: 160%;
   color: white;
+
+#map-container {
+   height: 400px;
+   border-radius: 16px 16px;
+   border-color: #fff;
+   border-style: solid;
+   box-shadow: 2px 2px 10px #B1B1B1;
+   margin-top: 25px;
+   border-width: 7px;
+ }
+ 
+ #map-canvas {
+   height: 384px;
+   width: 100%;
+ }
+
+#gave-cash-btn {
+    padding: 4%;
+    font-size: 20px;
+    margin-mottom: -12%;
+    background-color: #602F89;
+    border-style: none;
+    text-align: center;
+    height: 8vh;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 160%;
+    color: white;
+}
+
+#cancel-give-btn {
+    padding: 4%;
+    font-size: 20px;
+    margin-mottom: -12%;
+    background-color: #602F89;
+    border-style: none;
+    text-align: center;
+    height: 8vh;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 160%;
+    color: white;
 }
 
 #cash-request-page i{
