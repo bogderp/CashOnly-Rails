@@ -79,6 +79,21 @@ class UserController < ApplicationController
 	def req
 
 	end
+
+	def give_cash
+		account_sid = 'AC9917917b900273ee19a7241fb7fc317b' 
+		auth_token = '703528b62be826a266860064c9dab0e3' 
+
+		# set up a client to talk to the Twilio REST API 
+		@client = Twilio::REST::Client.new account_sid, auth_token 
+ 
+		@client.account.messages.create({
+			:from => '+13134665631', 
+			:to => '+13174167556', 
+			:body => 'New cash request for $5!',  
+		})
+		puts "in give_cash controller"
+	end
 	
 	private
 
