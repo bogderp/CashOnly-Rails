@@ -14,7 +14,11 @@
           </div>
         
     </div>
-    <div id="wrapper">		
+    <div id="inner-wrap">		
+        <div id="recipient-photo">
+            <%= image_tag "Erin.jpg", alt: "recipient-photo", :id => "recipient-photo" %>
+            <div id="give-cash-wrapper"><h2 id="give-cash-title">Erin can get you cash!</h2></div>
+        </div>
 		<% if !session[:access_token].nil? %>
 		    <div id="wrapper">
 				<div id="dollar">$</div>
@@ -26,10 +30,10 @@
 		    </div>
 
 	    <% else %>
-	    	<a class="button" href="https://api.venmo.com/v1/oauth/authorize?client_id=2877&scope=make_payments&response_type=code">
-				login with venmo
-			</a>
+	    	<button type="submit" id="gave-cash-btn" onclick="location.href='https://api.venmo.com/v1/oauth/authorize?client_id=2877&scope=make_payments&response_type=code'">Log in with Venmo!
+			</button>
+	    	
 		<% end %>
     </div>
-    <button type="submit" id="cancel_request" class="need_request" onclick="location.href='/account'">Cancel</button>
+    <button type="submit" id="cancel-give-btn" onclick="location.href='/account'">Cancel</button>
 </div>

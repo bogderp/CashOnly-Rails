@@ -1,14 +1,29 @@
 <div id="give-cash-page" class="page">
-    <!-- user photo
-    user names needs $5 cash
-    map -->
-    <div id="recipient-photo">
-    	<%= image_tag "Erin.jpg", alt: "recipient-photo", :id => "recipient-photo" %>
-        <div id="give-cash-wrapper"><h2 id="give-cash-title">Erin needs $5!</h2></div>
+    <div id="accordion" class="accordion">
+        
+            <div class="link">
+                <div id="text">
+                  <%= image_tag "logo.svg", alt: "logo", :id => "logo"%>
+                  <h1 id="title">CashOnly</h1>
+                </div>
+                <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="submenu">
+              <button type="submit" id="stop-location-tracking">Stop Location Tracking</button>
+              <div id="logout" >Log out</div>
+          </div>
+        
     </div>
-    <div id='map-container'>
-    	<div id="map-canvas"></div>
+    <div id="inner-wrap">
+        <div id="recipient-photo">
+            <%= image_tag "Lauren.jpg", alt: "recipient-photo", :id => "recipient-photo" %>
+            <div id="give-cash-wrapper"><h2 id="give-cash-title">Lauren needs $5!</h2></div>
+        </div>
+        <div id='map-container'>
+            <div id="map-canvas"></div>
+        </div>
+        <button type="submit" id="gave-cash-btn">Exchange Complete!</button>
+        <button type="submit" id="cancel-give-btn" onclick="location.href='/account'">Cancel</button>
     </div>
-    <button type="submit" id="gave-cash-btn">Exchange Complete!</button>
-    <button type="submit" id="cancel-give-btn" onclick="location.href='/account'">Cancel</button>
+
 </div>
