@@ -1,15 +1,15 @@
  <div id="logged-in" class="page">
     <div id="accordion" class="accordion">
-        <div>
+        
             <div class="link">
-                <div id="text">CashOnly</div>
+                <div id="text"><%= image_tag "logo.svg", alt: "logo", :id => "logo"%><h1 id="title">CashOnly</h1></div>
                 <i class="fa fa-chevron-down"></i>
             </div>
             <div class="submenu">
               <button type="submit" id="stop-location-tracking">Stop Location Tracking</button>
               <div id="logout" >Log out</div>
           </div>
-        </div>
+        
     </div>
     <div><button id="request-cash" class="init-request"><a href="/req">Request Cash</a></button></div>
     <div><button id="request-cash" class="init-request"><a href="/give_cash">Have Cash</a></button></div>

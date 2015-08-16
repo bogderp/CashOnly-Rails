@@ -6,20 +6,19 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:700" %>
-        <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" %>
-        <%= stylesheet_link_tag "home" %>
         
     </head>
     <body>
         <div id="home" class="page">
             <div id="title-logo">
-                <div id="title-wrapper"><h1 id="title">CashOnly</h1></div>
-                <%= image_tag "logo.svg", alt: "logo", :id => "logo" %>
+                <div id="title-wrapper"><%= image_tag "logo.svg", alt: "logo", :id => "logo"%><h1 id="title">CashOnly</h1></div>
+            </div>
+            <div id="people-image-container">
+                <%= image_tag "people.jpg", alt: "people", :id => "people" %>
             </div>
             
             <div>
-                <button class="front" id="signup-button" onclick="$('#signup').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/signup">Sign up</a></button>
+                <button class="front" id="signup-button" onclick="$('#signup').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/signup">Sign up</a>
                 <button class="front" id="login-button"  onclick="$('#login').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/login">Log in</a></button>
             </div>
         </div>     
