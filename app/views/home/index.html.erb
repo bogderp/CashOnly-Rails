@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:700" %>
+        <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" %>
+        <%= stylesheet_link_tag "home" %>
+        
+    </head>
+    <body>
+        <div id="home" class="page">
+            <div id="title-logo">
+                <div id="title-wrapper"><h1 id="title">CashOnly</h1></div>
+                <%= image_tag "logo.svg", alt: "logo", :id => "logo" %>
+            </div>
+            
+            <div>
+                <button class="front" id="signup-button" onclick="$('#signup').fadeIn('slow'); $('#home').fadeOut('slow');">Sign up</button>
+                <button class="front" id="login-button" onclick="$('#login').fadeIn('slow'); $('#home').fadeOut('slow');">Log in</button>
+            </div>
+        </div>
+        <div id="signup" style="display:none" class="page">
+
+
+          <%= form_tag("/signup", method: "post", id: "signup-form") do %>
+            <i class="fa fa-times" onclick="$('#home').fadeIn('slow'); $('#signup').fadeOut('slow');"></i>
+            <%= text_field_tag 'user', "", class: 'box', placeholder: "username"%>
+            <%= email_field_tag 'email', "", class: 'box', placeholder: "email"%>
+            <%= password_field_tag 'password', "", class: 'box', placeholder: "password"%>
+            <%= submit_tag("Sign Up", id: 'signup-button-confirm') %>
+          <% end %>
+
+        </div>
+
+        <div id="login" style="display:none" class="page">
+
+          <%= form_tag("/login", method: "post", id: "login-form") do %>
+            <i class="fa fa-times" onclick="$('#home').fadeIn('slow'); $('#login').fadeOut('slow');"></i>
+            <%= text_field_tag 'username', "", class: 'box', placeholder: "username"%>
+            <%= password_field_tag 'pass', "", class: 'box', placeholder: "password"%>
+            <%= submit_tag("Log In", id: 'login-button-confirm') %>
+          <% end %>
+      
+        </div>           
+
+        <div id="logged-in" style="display:none" class="page">
+            <div id="accordion" class="accordion">
+                <div>
+                    <div class="link">
+                        <div id="text">CashOnly</div>
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="submenu">
+                      <button type="submit" id="stop-location-tracking">Stop Location Tracking</button>
+                      <div id="logout" >Log out</div>
+                  </div>
+                </div>
+            </div>
+            <div><button type="submit" id="request-cash" class="init-request">Request Cash</button></div>
+        </div>
+
+        <div id="cash-request-page" style="display:none" class="page">
+            <i class="fa fa-times" onclick="$('#logged-in').fadeIn('slow'); $('#cash-request-page').fadeOut('slow');"></i>
+            <div id="dollar">$</div>
+            <form id="money-form">
+                <input type="text" class="text-box" >
+                <button type="submit" id="request-cash" style="display:none" class="request">Confirm Request</button>
+            </form>
+
+        </div>
+
+        <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" %>
+        <%= javascript_include_tag "https://code.jquery.com/jquery-1.11.3.min.js" %>
+        <%= javascript_include_tag "index" %>
+
+    </body>
+</html>
