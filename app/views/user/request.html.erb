@@ -1,9 +1,25 @@
 <div id="cash-request-page" class="page">
-    <i class="fa fa-times" onclick="$('#logged-in').fadeIn('slow'); $('#cash-request-page').fadeOut('slow');"></i>
-    <div id="dollar">$</div>
-    <form action="/need_cash" method="post" id="money-form">
-        <input  type="text" id="money" class="text-box" >
-        <button type="submit" id="request-cash" style="display:none" class="request">Search</button>
-    </form>
-
+    <div id="accordion" class="accordion">
+        
+            <div class="link">
+                <div id="text">
+                  <%= image_tag "logo.svg", alt: "logo", :id => "logo"%>
+                  <h1 id="title">CashOnly</h1>
+                </div>
+                <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="submenu">
+              <button type="submit" id="stop-location-tracking">Stop Location Tracking</button>
+              <div id="logout" >Log out</div>
+          </div>
+        
+    </div>
+    <div id="wrapper">
+		<div id="dollar">$</div>
+	    <form action="/venmo" method="post" id="venmo-form">
+	        <input  type="text" id="money" class="text-box" >
+	        <button type="submit" id="request-cash" class="need_request" >Request</button>
+	    </form>
+    </div>
+    <button type="submit" id="cancel_request" class="need_request" onclick="location.href='/account'">Cancel</button>
 </div>

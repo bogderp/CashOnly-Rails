@@ -139,19 +139,47 @@
     flex-direction: column;
     text-align: center;
     align-content: center;
-    justify-content: space-between;
 }
 
 #logged-in div {
     text-align: center;
 }
 
+.init-request{
+  background-color: #602F89;
+  margin: 10px 0px;
+  border-style: none;
+  border-radius: 7px;
+  text-align: center;
+  height: 8vh;
+  width: 80%;
+  height: 120px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 160%;
+  color: white;
+}
+
+#give{
+  background-color: #602F89;
+}
+
+#take {
+  background-color: #7E53A2;
+}
+
+#welcome{
+  h1{
+    font-family: 'Cookie', sans-serif;
+    color: white;
+    font-size: 72px;
+  }
+}
+
 .need_request {
     padding: 4%;
-    background-color: #602F89;
     border-style: none;
     text-align: center;
-    height: 8vh;
+    height: 61px;;
     width: 100%;
     font-family: 'Raleway', sans-serif;
     font-size: 160%;
@@ -166,6 +194,11 @@
 }
 
 #request-cash {
+  position: absolute;
+  bottom: 61px;
+  left: 0px;
+  right: 0px;
+  background-color: #7E53A2;
   width: 100%;
 }
 
@@ -181,6 +214,7 @@
   font-family: 'Raleway', sans-serif;
   font-size: 160%;
   color: white;
+}
 
 #map-container {
    height: 400px;
@@ -225,11 +259,6 @@
     color: white;
 }
 
-#cash-request-page i{
-    position: absolute;
-    right: 15px;
-}
-
 #cash-request-page {
     display: flex;
     flex-direction: column;
@@ -239,6 +268,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    margin-top: 200px;
+    margin-left: 65px;
     align-content: center;
     align-items: center;
     text-align: center;
@@ -251,14 +283,15 @@
     color: white;
     width: 100px;
     height: 100px;
-    padding: 0px;
+    padding-right: 20px;
 }
 
 .text-box {
     width: 40%;
     padding: 4%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     background-color: #7E53A2;
+    border-radius: 7px;
     border:none;
     color: white;
     font-size: 80px;

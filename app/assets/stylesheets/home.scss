@@ -63,11 +63,11 @@ a{
 #title-wrapper {
     background-color: #602F89;
     padding-top: 3%;
-    padding-bottom: 3%;
-    height: 10vh;
+    padding-bottom: 14px;
+    height: 76px;
     display: flex;
     align-items:center;
-    margin-top: -3%;
+    margin-top: -14px;
 }
 
 #people-image-container {
@@ -82,11 +82,11 @@ a{
 
 #text {
     background-color: #602F89;
-    padding-top: 3%;
+    padding-top: 14px;
     height: 10vh;
     display: flex;
     align-items:center;
-    margin-top: -3%;
+    margin-top: -14px;
 }
 
 #title {
@@ -155,17 +155,6 @@ a{
 
 }
 
-.fa {
-    /*color: white;
-    font-size: 30px;*/
-}
-
-
-
-a:click {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 ::-webkit-input-placeholder {
     font-family: 'Raleway', sans-serif;
 }
@@ -183,45 +172,54 @@ a:click {
 }
 
 .accordion {
-  margin-top: -3%;
-  background: #602F89;
+  background-color: #602F89;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  height: 91px;
+  margin-top: -14px;
 }
 
 .link {
-  height: 12vh;
+  background-color: #602F89;
+  padding-top: 44px;
+  height: 10vh;
   display: flex;
   align-items:center;
-  /*font-family: 'Raleway', sans-serif;
-  font-size: 30px;*/
-  color: white;
+  margin-top: -14px;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 #text {
-    /*position: absolute;
-    top: 8px;
-    left: 15px;
-    padding: 0px;
-    margin: 0px;*/
-    
+    padding-top: 21px;
+
+    #logo {
+      padding-left: 8px;
+      padding-right: 11px;
+    }
+
+    h1{
+      font-size: 64px;
+    }
 }
+
 
 .accordion div:last-child .link { border-bottom: 0; }
 
 .accordion div i {
-  font-size: 24px;
+  font-size: 30px;
   color: #white;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.accordion div i.fa-chevron-down {
+div i.fa-chevron-down {
   position: absolute;
   right:15px;
-  top: 15px;
+  top: 40px;
+  margin-top: 24px;
   font-size: 20px;
   color: white;
 }
@@ -230,7 +228,7 @@ a:click {
 
 .accordion div.open i { color: white; }
 
-.accordion div.open i.fa-chevron-down {
+div.open i.fa-chevron-down {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -251,13 +249,6 @@ a:click {
 
 .submenu div { border-bottom: 1px solid #7E53A2; }
 
-#logged-in {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;
-    justify-content: space-between;
-}
 
 
 
