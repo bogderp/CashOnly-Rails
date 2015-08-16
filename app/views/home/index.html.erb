@@ -17,9 +17,9 @@
                 <%= image_tag "people.jpg", alt: "people", :id => "people" %>
             </div>
             
-            <div>
-                <button class="front" id="signup-button" onclick="$('#signup').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/signup">Sign up</a>
-                <button class="front" id="login-button"  onclick="$('#login').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/login">Log in</a></button>
+            <div id="black-back">
+                <button class="front" id="signup-button" onclick="location.href='/signup'">Sign up</button>
+                <button class="front" id="login-button"  onclick="location.href='/login'">Log in</button>
             </div>
         </div>     
 

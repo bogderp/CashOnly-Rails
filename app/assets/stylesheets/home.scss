@@ -1,5 +1,7 @@
 body {
     background-color: #452463; 
+    margin: 0px;
+    padding: 0px;
 }
 
 a{
@@ -9,9 +11,8 @@ a{
 }
 
 .page {
-    width: 104%;
-    margin-left:-1.7%;
-    height: 99vh;
+    width: 460px;
+    height: 760px;
 }
 
 #home {
@@ -19,29 +20,35 @@ a{
     flex-direction: column;
     text-align: center;
     align-content: center;
-    justify-content: space-between;
+
+}
+
+#black-back {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 304px;
+  justify-content: center;
 }
 
 .front {
-    align-self:flex-end;
     font-family: 'Raleway', sans-serif;
     color: white;
-    width: 47%;
-    margin-bottom: 2%;
+    width: 70%;
     border-style: none;
-    border-radius: 5px;
-    height: 8vh;
-    font-size: 24px;
+    border-radius: 7px;
+    height: 100px;
+    font-size: 30px;
+    margin: 15px 0px;
 }
 
 #login-button {
     background-color: #602F89;
-    margin-right: 2%;
 }
 
 #signup-button {
     background-color: #7E53A2;
-    margin-left: 2%;
 }
 
 #title-logo {
@@ -64,7 +71,6 @@ a{
 }
 
 #people-image-container {
-    
     background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);   /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -94,7 +100,7 @@ a{
 #people {
     padding-top: 5%;
     width: 100%;
-    opacity: .15;
+    opacity: .29;
 }
 
 #logo {

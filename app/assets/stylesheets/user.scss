@@ -51,11 +51,6 @@
 }
 
 
-
-a:click {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
 ::-webkit-input-placeholder {
     font-family: 'Raleway', sans-serif;
 }
@@ -151,10 +146,8 @@ a:click {
     text-align: center;
 }
 
-#request-cash {
+.need_request {
     padding: 4%;
-    font-size: 20px;
-    margin-mottom: -12%;
     background-color: #602F89;
     border-style: none;
     text-align: center;
@@ -165,34 +158,68 @@ a:click {
     color: white;
 }
 
+#venmo-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; 
+}
+
+#request-cash {
+  width: 100%;
+}
+
+#cancel_request {
+  position: absolute;
+  bottom: 0px;
+  padding: 4%;
+  background-color: #602F89;
+  border-style: none;
+  text-align: center;
+  height: 8vh;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-size: 160%;
+  color: white;
+}
+
 #cash-request-page i{
     position: absolute;
     right: 15px;
 }
 
 #cash-request-page {
-    display: inline-block;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #dollar {
-    font-size: 100px;
+    align-self: center;
+    font-size: 80px;
     font-family: 'Raleway', sans-serif;
     color: white;
     width: 100px;
+    height: 100px;
     padding: 0px;
-    padding-right: 15px;
-    margin-left: 45px;
 }
 
 .text-box {
-    width: 60%;
+    width: 40%;
     padding: 4%;
     font-family: 'Raleway', sans-serif;
     background-color: #7E53A2;
     border:none;
     color: white;
-    font-size: 100px;
+    font-size: 80px;
 }
 
 .request{
