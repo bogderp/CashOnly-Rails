@@ -8,7 +8,7 @@ function initialize() {
         
   var mapOptions = {
           center: new google.maps.LatLng(37.414273, -122.077410),
-          zoom: 8,
+          zoom: 16,
           mapTypeId: google.maps.MapTypeId.NORMAL,
           panControl: true,
           scaleControl: false,
@@ -27,7 +27,11 @@ function initialize() {
         codeLatLng(geocoding);
       });
       
-   
+      marker = new google.maps.Marker({
+       map: map,
+       position: {lat: 37.414273, lng: -122.077410},
+       title: 'Lauren'
+     });
 }
 
 var info;
@@ -44,6 +48,7 @@ function codeLatLng(geocoding){
   var lat = parseFloat(latLngStr[0]);
   var lng = parseFloat(latLngStr[1]);
   var latLng = new google.maps.LatLng(lat, lng);
+
   geocoding.geocode({'latLng': latLng}, function(results, status) {
      if (status == google.maps.GeocoderStatus.OK){
        if(results.length > 0){
@@ -56,7 +61,7 @@ function codeLatLng(geocoding){
            latlngbounds.extend(results[i].geometry.location);
              marker = new google.maps.Marker({
              map: map,
-             position: results[i].geometry.location
+             position: {lat: 37.414273, lng: -122.077410}
            });
           
           google.maps.event.addListener(marker, 'click', (function(marker,i) {

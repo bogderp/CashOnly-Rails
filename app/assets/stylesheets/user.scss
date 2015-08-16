@@ -128,11 +128,25 @@
 .submenu {
   display: none;
   background: #7E53A2;
-  height: 12vh;
-  font-size: 14px;
+  height: 80px;;
 }
 
-.submenu div { border-bottom: 1px solid #7E53A2; }
+#line {
+  padding: 0px;
+}
+
+.submenu div { 
+  border-bottom: 1px solid #7E53A2; 
+  font-size: 24px; 
+  background-color: #7E53A2; 
+  padding: 5px 0px;
+}
+
+.submenu div button{
+  font-size: 24px;
+  padding: px 0px;
+  text-align: center;
+}
 
 #logged-in {
     display: flex;
@@ -168,6 +182,7 @@
 }
 
 #welcome{
+  z-index: -1;
   h1{
     font-family: 'Cookie', sans-serif;
     color: white;
@@ -236,8 +251,6 @@
     position: absolute;
     bottom: 61px;
     padding: 4%;
-    font-size: 20px;
-    margin-mottom: -12%;
     background-color: #602F89;
     border-style: none;
     text-align: center;
