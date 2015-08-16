@@ -1,0 +1,22 @@
+<div id="login" class="page">
+
+  <% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+
+
+  <%= form_tag("/auth", method: "post", id: "login-form") do %>
+    <i class="fa fa-times" onclick="$('#home').fadeIn('slow'); $('#login').fadeOut('slow');"></i>
+    <%= text_field_tag 'username', "", class: 'box', placeholder: "username"%>
+    <%= password_field_tag 'pass', "", class: 'box', placeholder: "password"%>
+    <%= submit_tag("Log In", id: 'login-button-confirm') %>
+  <% end %>
+  
+</div>  
+
+
+
+
+
+
+
