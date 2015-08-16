@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   get 'account' => 'user#account'
   get 'req' => 'user#request'
   post 'need_cash' => 'user#need_cash'
+  get 'need_cash' => 'user#need_cash'
   get 'give_cash' => 'user#give_cash'
+  get 'venmo_auth' => 'user#venmo_auth'
+  post 'venmo' => 'user#venmo'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

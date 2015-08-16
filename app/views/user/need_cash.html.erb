@@ -2,10 +2,18 @@
     <i class="fa fa-times" onclick="location.href='/req'"></i>
     <div id="wrapper">
 		<div id="dollar">$</div>
-	    <form action="/venmo" method="post" id="venmo-form">
-	        <input  type="text" id="money" class="text-box" >
-	        <button type="submit" id="request-cash" class="need_request" >Request</button>
-	    </form>
+		
+		<% if !session[:access_token].nil? %>
+	    	<form action="/venmo" method="post" id="venmo-form">
+	    		<% puts session[:access_token] %>
+	        	<input  type="text" id="money" name="money" class="text-box" >
+	        	<button type="submit" id="request-cash" class="need_request" >Request</button>
+	    	</form>
+	    <% else %>
+	    	<a class="button" href="https://api.venmo.com/v1/oauth/authorize?client_id=2877&scope=make_payments&response_type=code">
+				login with venmo
+			</a>
+		<% end %>
     </div>
     <button type="submit" id="cancel_request" class="need_request" onclick="location.href='/account'">Cancel</button>
 </div>

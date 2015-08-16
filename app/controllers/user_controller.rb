@@ -1,6 +1,11 @@
 require 'parse_config'
 
+
+
 class UserController < ApplicationController
+
+	skip_before_filter  :verify_authenticity_token
+
 	def login
     if cookies.signed[:cashOnlyUser]
       redirect_to '/account'
@@ -44,6 +49,33 @@ class UserController < ApplicationController
 
 	end
 
+	def venmo_auth
+		if !params[:code].nil?
+
+			uri = URI("https://api.venmo.com/v1/oauth/access_token")
+			response = Net::HTTP.post_form(uri, 'client_id' => '2877', 'code' => params[:code], "client_secret" => "6zDZV5JFygYH2dQPjETAybvpaHj6eY7g").body
+			data = JSON.parse(response)["user"]
+			puts data
+
+			session[:access_token] = JSON.parse(response)["access_token"]
+			puts session[:access_token]
+			session[:venmo_username] = data["username"]
+			session[:venmo_id] = data["id"]
+		end
+		redirect_to "/need_cash"
+	end
+
+	def venmo
+		amount = venmo_params['money']
+		uri = URI("https://api.venmo.com/v1/payments")
+		puts session[:access_token]
+		puts "Amount: "
+		puts amount
+		@response = Net::HTTP.post_form(uri, 'user_id' => '1221360378445824920', 'amount' => amount.to_s, "note" => "Cash Only", "audience" => "friends", "access_token" => session[:access_token]).body
+		puts @response
+		redirect_to "/account"
+	end
+
 	def req
 
 	end
@@ -57,5 +89,9 @@ class UserController < ApplicationController
   def user_signup_params
     params.permit(:user, :email, :password)
   end  
+
+  def venmo_params
+  	params.permit(:money)
+  end
 
 end
