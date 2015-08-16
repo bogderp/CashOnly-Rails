@@ -19,26 +19,10 @@
             </div>
             
             <div>
-                <button class="front" id="signup-button" onclick="$('#signup').fadeIn('slow'); $('#home').fadeOut('slow');">Sign up</button>
+                <button class="front" id="signup-button" onclick="$('#signup').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/signup">Sign up</a></button>
                 <button class="front" id="login-button"  onclick="$('#login').fadeIn('slow'); $('#home').fadeOut('slow');"><a href="/login">Log in</a></button>
             </div>
         </div>     
-
-        <div id="logged-in" style="display:none" class="page">
-            <div id="accordion" class="accordion">
-                <div>
-                    <div class="link">
-                        <div id="text">CashOnly</div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                    <div class="submenu">
-                      <button type="submit" id="stop-location-tracking">Stop Location Tracking</button>
-                      <div id="logout" >Log out</div>
-                  </div>
-                </div>
-            </div>
-            <div><button type="submit" id="request-cash" class="init-request">Request Cash</button></div>
-        </div>
 
         <div id="cash-request-page" style="display:none" class="page">
             <i class="fa fa-times" onclick="$('#logged-in').fadeIn('slow'); $('#cash-request-page').fadeOut('slow');"></i>

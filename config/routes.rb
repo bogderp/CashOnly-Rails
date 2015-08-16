@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root :to => 'home#index', :as => :index
   get 'login'  => 'user#login'
+  get 'signup' => 'user#signup'
   post 'auth'  => 'user#auth'
+  post 'create' => 'user#create'
   get 'account' => 'user#account'
   resources :user
 

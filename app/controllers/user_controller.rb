@@ -4,6 +4,25 @@ class UserController < ApplicationController
 	def login
 	end
 
+	def create
+  	begin
+			signup = Parse::User.new({
+			  :username => user_signup_params['user'],
+			  :email => user_signup_params['email'],
+			  :password => user_signup_params['password'],
+			})
+			response = signup.save
+			cookies.signed[:cashOnlyUser] = { value: response["objectId"], expires: (Time.now.getgm + 86400) }
+			redirect_to '/account'	
+		rescue Parse::ParseProtocolError => e
+			if e.to_s.split(":").first == '202'
+		  	flash[:error] = "Username is taken"
+		  elsif e.to_s.split(":").first == "203"
+		  	flash[:error] = "Email is taken"
+		  end
+		  redirect_to '/signup'
+		end
+	end
 
 	def auth
 	  begin

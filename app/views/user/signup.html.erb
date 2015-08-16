@@ -1,0 +1,15 @@
+<div id="signup" class="page">
+
+  <% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+
+  <%= form_tag("/create", method: "post", id: "signup-form") do %>
+    <i class="fa fa-times" onclick="$('#home').fadeIn('slow'); $('#signup').fadeOut('slow');"></i>
+    <%= text_field_tag 'user', "", class: 'box', placeholder: "username"%>
+    <%= email_field_tag 'email', "", class: 'box', placeholder: "email"%>
+    <%= password_field_tag 'password', "", class: 'box', placeholder: "password"%>
+    <%= submit_tag("Sign Up", id: 'signup-button-confirm') %>
+  <% end %>
+
+</div>
