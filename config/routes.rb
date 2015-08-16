@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'auth'  => 'user#auth'
   post 'create' => 'user#create'
   get 'account' => 'user#account'
-  resources :user
+  get 'req' => 'user#request'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

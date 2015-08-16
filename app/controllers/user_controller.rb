@@ -2,6 +2,12 @@ require 'parse_config'
 
 class UserController < ApplicationController
 	def login
+    if cookies.signed[:cashOnlyUser]
+      redirect_to '/account'
+    end
+	end
+
+	def signup
 	end
 
 	def create
@@ -38,10 +44,18 @@ class UserController < ApplicationController
 
 	end
 
+	def req
+
+	end
+
 	private
 
   def user_login_params
     params.permit(:username, :pass)
   end
+
+  def user_signup_params
+    params.permit(:user, :email, :password)
+  end  
 
 end

@@ -24,16 +24,6 @@
             </div>
         </div>     
 
-        <div id="cash-request-page" style="display:none" class="page">
-            <i class="fa fa-times" onclick="$('#logged-in').fadeIn('slow'); $('#cash-request-page').fadeOut('slow');"></i>
-            <div id="dollar">$</div>
-            <form id="money-form">
-                <input type="text" class="text-box" >
-                <button type="submit" id="request-cash" style="display:none" class="request">Confirm Request</button>
-            </form>
-
-        </div>
-
         <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" %>
         <%= javascript_include_tag "https://code.jquery.com/jquery-1.11.3.min.js" %>
         <%= javascript_include_tag "index" %>
