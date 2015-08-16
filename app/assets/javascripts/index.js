@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var lat = 0.0;
+var lng = 0.0;
+
 
 $( document ).ready(function() {
 
@@ -101,7 +104,6 @@ $( document ).ready(function() {
     $(".request").click(function(){
         alert('Request Received');
     })
-
 
 });
 

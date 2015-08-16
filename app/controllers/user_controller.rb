@@ -47,7 +47,7 @@ class UserController < ApplicationController
 	def req
 
 	end
-
+	
 	private
 
   def user_login_params

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'create' => 'user#create'
   get 'account' => 'user#account'
   get 'req' => 'user#request'
+  post 'need_cash' => 'user#need_cash'
+  get 'give_cash' => 'user#give_cash'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
